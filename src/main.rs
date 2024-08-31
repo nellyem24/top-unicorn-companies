@@ -1,3 +1,5 @@
+mod top_countries;
+
 fn main() {
     let cmd = clap::Command::new("uni")
         .bin_name("uni")
@@ -15,7 +17,7 @@ fn main() {
     let matches = match matches.subcommand() {
         Some(("example", matches)) => matches,
         Some(("bycountry", _)) => {
-            bycountry();
+            top_countries::get_top_ten_unicorn_countries();
             return;
         }
         _ => unreachable!("clap should ensure we don't get here"),

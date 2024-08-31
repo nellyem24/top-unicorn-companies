@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.5.16", features = ["cargo"] }
 clap-cargo = "0.14.1"
+polars = { version = "0.42.0", features = ["lazy"] }
