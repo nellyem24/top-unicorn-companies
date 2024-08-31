@@ -10,7 +10,7 @@ pub fn get_top_ten_unicorn_countries() -> Result<DataFrame, PolarsError> {
     // Group by country and count unicorns
     let result = df.group_by(["Country"])?.select(["Company"]).count();
 
-    // println!("{:?}", result);
+    println!("{:?}", result);
     return result;
 }
 
